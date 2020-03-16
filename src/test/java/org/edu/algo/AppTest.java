@@ -33,6 +33,29 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        UnionFind unionFind = new UnionFind(10);
+        unionFind.union(4, 3);
+        unionFind.showComponent();
+
+        unionFind.union(3, 8);
+        unionFind.showComponent();
+
+        unionFind.union(6, 5);
+        unionFind.showComponent();
+
+        unionFind.union(9, 4);
+        unionFind.showComponent();
+
+        unionFind.union(2, 1);
+        unionFind.showComponent();
+//
+//        assertFalse(unionFind.connected(0, 7));
+//
+        assertTrue( unionFind.connected(8, 9) );
+        assertFalse(unionFind.connected(5, 0));
+
+
+        unionFind.union(5, 10);
+        unionFind.showComponent();
     }
 }
