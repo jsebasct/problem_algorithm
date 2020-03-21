@@ -16,8 +16,10 @@ public class UnionFind {
 //        this.components[q] = currentValue;
 //        this.components[first] = this.components[last];
 
+        int replaceValue = this.components[first];
+
         for (int i = 0; i < this.components.length; i++) {
-            if (this.components[i] ==  first) {
+            if (this.components[i] ==  replaceValue) {
                 this.components[i] = this.components[last];
             }
         }
